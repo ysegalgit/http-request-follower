@@ -1,6 +1,6 @@
 {
   "name": "http-request-follower",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "express middleware for following http request chain",
   "main": "index.js",
   "scripts": {
