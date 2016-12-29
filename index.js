@@ -1,6 +1,6 @@
 'use strict';
 
-var uuid = require('node-uuid');
+//var uuid = require('node-uuid');
 
 module.exports = httpRequestFollower;
 
@@ -9,7 +9,8 @@ const HRF_HEADER = 'x-hrf-id';
 function httpRequestFollower (options){
 	return function httpRequestFollower (req, res, next){
 		if(!req.header(HRF_HEADER))
-			req.headers[HRF_HEADER] = uuid.v4();
+			//req.headers[HRF_HEADER] = uuid.v4();
+			req.headers[HRF_HEADER] = Math.floor((Math.random() * 1000000000) + 1);
 
 		return next();
 	};
