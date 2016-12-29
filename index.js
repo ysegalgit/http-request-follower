@@ -26,3 +26,7 @@ module.exports.getHrfHeader = function(req){
 	}
 	return null;
 };
+
+module.exports.getHrfId = function(req){
+	return req.header(HRF_HEADER) || 0;
+};
